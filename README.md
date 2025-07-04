@@ -16,16 +16,16 @@ Laravel QueryMonitor is a package for Laravel that allows you to monitor and log
 
 ## Requirements
 - "php": ">=8.1",
-- "illuminate/support": "^10.0|^11.0",
-- "illuminate/database": "^10.0|^11.0",
-- "illuminate/log": "^10.0|^11.0",
-- "illuminate/config": "^10.0|^11.0"
+- "illuminate/support": "^10.0|^11.0|^12.0",
+- "illuminate/database": "^10.0|^11.0|^12.0",
+- "illuminate/log": "^10.0|^11.0|^12.0",
+- "illuminate/config": "^10.0|^11.0|^12.0"
 
 ## Installation
 You can install the package via Composer:
 
 ```bash
-composer require padosoft/laravel-querymonitor
+composer require juniora/laravel-querymonitor
 ```
 Publish the configuration and migrations:
 
