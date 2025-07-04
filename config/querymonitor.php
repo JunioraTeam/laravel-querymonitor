@@ -39,7 +39,7 @@ return [
          */
         'sqlRegEx' => env('QUERYMONITOR_QUERY_SQL_REGEX', '^.*$'),
 
-        'auth_guard' => end('QUERYMONITOR_AUTH_GUARD', 'web'),
+        'auth_guard' => env('QUERYMONITOR_AUTH_GUARD', 'web'),
     ],
 
     /*
