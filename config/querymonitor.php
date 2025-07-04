@@ -38,6 +38,8 @@ return [
          * For example, use '^SELECT.*$' to match only SELECT statements.
          */
         'sqlRegEx' => env('QUERYMONITOR_QUERY_SQL_REGEX', '^.*$'),
+
+        'auth_guard' => end('QUERYMONITOR_AUTH_GUARD', 'web'),
     ],
 
     /*

@@ -43,6 +43,9 @@ class QueryMonitorServiceProvider extends ServiceProvider
 
             // Log the query and execution time
             Log::info('QueryMonitor: Slow SQL query detected', [
+                'request_method' => request()->method(),
+                'request_path' => request()->path(),
+                'student_id' => auth(Config::get('querymonitor.auth_guard'))->id(),
                 'query' => $sql,
                 'execution_time' => $query->time . ' ms',
             ]);
