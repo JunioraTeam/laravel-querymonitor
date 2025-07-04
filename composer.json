@@ -1,5 +1,5 @@
 {
-    "name": "padosoft/laravel-querymonitor",
+    "name": "juniora/laravel-querymonitor",
     "description": "Laravel QueryMonitor is a package for Laravel that allows you to monitor and log:\n\nSlow SQL Queries: Monitors the actual execution time of SQL queries on the database.\nSlow Eloquent Methods: Monitors the total time taken by Eloquent methods, including PHP processing.\n",
     "keywords": [
         "padosoft",
@@ -18,14 +18,20 @@
             "email": "helpdesk@padosoft.com",
             "homepage": "https://www.padosoft.com",
             "role": "Developer"
+        },
+        {
+            "name": "Nima HeydariNasab",
+            "email": "nima.heydari79@yahoo.com",
+            "homepage": "https://nimah79.ir",
+            "role": "Maintainer"
         }
     ],
     "require": {
         "php": ">=8.1",
-        "illuminate/support": "^10.0|^11.0",
-        "illuminate/database": "^10.0|^11.0",
-        "illuminate/log": "^10.0|^11.0",
-        "illuminate/config": "^10.0|^11.0"
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/log": "^10.0|^11.0|^12.0",
+        "illuminate/config": "^10.0|^11.0|^12.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5|^10.0|^11.0",
