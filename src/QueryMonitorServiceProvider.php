@@ -34,19 +34,12 @@ class QueryMonitorServiceProvider extends ServiceProvider
                 return;
             }
 
-            // Build the full SQL query with bindings
-            $sql = $query->sql;
-            foreach ($query->bindings as $binding) {
-                $value = is_numeric($binding) ? $binding : "'" . addslashes($binding) . "'";
-                $sql = preg_replace('/\?/', $value, $sql, 1);
-            }
-
             // Log the query and execution time
             Log::info('QueryMonitor: Slow SQL query detected', [
                 'request_method' => request()->method(),
                 'request_path' => request()->path(),
                 'student_id' => auth(Config::get('querymonitor.auth_guard'))->id(),
-                'query' => $sql,
+                'query' => $query->toRawSql(),
                 'execution_time' => $query->time . ' ms',
             ]);
         });
